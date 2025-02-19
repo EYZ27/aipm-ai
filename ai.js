@@ -199,7 +199,7 @@ Scheduling rules:
    - This may involve extending the task duration or shifting meeting dates to the next workday.
 
 Formatting and content guidelines:
-- Date format: Output dates in the format "yyyy-mm-dd (ddd)".
+- Date format: Output dates in the format "yyyy-mm-dd".
 - Description Language: The description should be written in Korean, with clear and detailed explanations.
 - Keywords for reference: Consider the following key milestones when creating the schedule:
   - 킥오프 미팅, 1차 시안, 2차 시안, 3차 시안, 피드백 미팅
@@ -217,8 +217,8 @@ ${duration_ex[category_num]}
 [
     {
     "name": "킥오프 미팅",
-    "start_date": "2025-01-02 (목)",
-    "end_date": "2025-01-02 (목)",
+    "start_date": "2025-01-02",
+    "end_date": "2025-01-02",
     "days": "1일",
     "desc": "프로젝트 시작을 위한 킥오프 미팅을 진행합니다. 이 미팅에서는 프로젝트 목표, 일정, 그리고 기초 정보를 논의합니다."
     },
@@ -828,11 +828,11 @@ async function getAIDraft(analyzedReq) {
  *                           days:
  *                             type: string
  *                             description: 기간
- *                             example: 0
+ *                             example: 1일
  *                           desc:
  *                             type: string
  *                             description: 일정 설명
- *                             example: 첫번째 미팅입니다.
+ *                             example: 프로젝트 시작을 위한 킥오프 미팅을 진행합니다. 이 미팅에서는 프로젝트 목표, 일정, 그리고 기초 정보를 논의합니다.
  *                         required:
  *                           - name
  *                           - start_date
