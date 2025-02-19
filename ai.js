@@ -12,11 +12,11 @@ dotenv.config();
 
 const app = express();
 
-app.options('*', cors()); // Preflight 요청 허용
+app.options('*', cors());
 
 // CORS 설정
 app.use(cors({
-    origin: ['https://eyz27.github.io/'],  // 프론트엔드 주소
+    origin: ['*'],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Accept'],
     credentials: true
